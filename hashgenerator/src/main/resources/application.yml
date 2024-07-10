@@ -1,0 +1,15 @@
+server:
+  port: 7777
+
+spring:
+  application:
+    name: hashgenerator
+  mvc:
+    cors:
+      configs:
+        pattern: /**
+        allowed-origins: "http://localhost:3000"
+        allowed-headers: "*"
+        exposed-headers: "hash-generator-header"
+        allowed-methods: "*"
+        allow-credentials: true

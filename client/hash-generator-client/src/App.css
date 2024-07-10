@@ -1,0 +1,379 @@
+body {
+  background: -webkit-linear-gradient(left, #E0FFFF, #AFEEEE);
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+.formContainer {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: rgb(136, 248, 233);
+  width: 800px;
+  height: 500px;
+  justify-content: center;
+  border-radius: 5%;
+  border: 1px solid black;
+}
+
+.titleText {
+  position: relative;
+  margin: 0 auto;
+  font-family: OCR A Std, monospace;
+  font-size: 50px;
+  margin-left: 65px;
+  margin-top: 100px;
+  justify-content: center;
+  transition: all 400ms ease;
+}
+
+.titleText:hover {
+  margin-top: 85px;
+}
+
+.inputData {
+  position: relative;
+  background-color: rgb(200, 240, 230);
+  -webkit-background-clip: content-box;
+  -moz-background-clip: content-box;
+  background-clip: content-box;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 100px;
+  margin-left: 163px;
+  width: 450px;
+  height: 50px;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 25px;
+  font-family: FreeMono, monospace;
+}
+
+.generateButton {
+  position: relative;
+  background-color: rgb(200, 240, 230);
+  margin-top: 70px;
+  margin-left: 163px;
+  width: 450px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 25px;
+  font-family: FreeMono, monospace;
+  transition: all 400ms ease;
+}
+
+.generateButton:hover {
+  margin-top: 55px;
+  border-radius: 10px;
+}
+
+.costFactorSelect {
+  position: relative;
+  background-color: rgb(200, 240, 230);
+  width: 50px;
+  height: 50px;
+  margin-left: 25px;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 20px;
+  font-family: FreeMono, monospace;
+}
+
+.outputContainer {
+  position: relative;
+  background-color: rgb(200, 240, 230);
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-left: 75px;
+  width: 650px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.resultText {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-size: 17px;
+  font-family: FreeMono, monospace;
+  width: 650px;
+  height: 40px;
+  padding: 0;
+}
+
+@media (max-width: 300px) {
+  .formContainer {
+    width: 150px;
+    height: 100px;
+    margin-top: 20px;
+  }
+  .inputData {
+    margin-top: 100px;
+    margin-left: 130px;
+    width: 220px;
+    height: 40px;
+  }
+  .generateButton {
+    margin-top: 100px;
+    margin-left: 130px;
+    width: 220px;
+    height: 40px;
+  }
+  .resultText {
+    width: 220px;
+    height: 40px;
+  }
+  .outputContainer {
+    width: 220px;
+    height: 40px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .formContainer {
+    width: 200px;
+    height: 150px;
+    margin-top: 40px;
+  }
+  .inputData {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 250px;
+    height: 40px;
+  }
+  .generateButton {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 250px;
+    height: 40px;
+  }
+  .resultText {
+    width: 240px;
+    height: 40px;
+  }
+  .outputContainer {
+    width: 240px;
+    height: 40px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .formContainer {
+    width: 250px;
+    height: 200px;
+    margin-top: 60px;
+  }
+  .inputData {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 310px;
+    height: 40px;
+  }
+  .generateButton {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 310px;
+    height: 40px;
+  }
+  .resultText {
+    width: 240px;
+    height: 40px;
+  }
+  .outputContainer {
+    width: 240px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .formContainer {
+    width: 300px;
+    height: 250px;
+    margin-top: 70px;
+  }
+  .inputData {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 250px;
+    height: 40px;
+  }
+  .generateButton {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 250px;
+    height: 40px;
+  }
+  .resultText {
+    width: 260px;
+    height: 40px;
+  }
+  .outputContainer {
+    width: 260px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .formContainer {
+    width: 350px;
+    height: 300px;
+    margin-top: 90px;
+  }
+  .inputData {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 270px;
+    height: 40px;
+  }
+  .generateButton {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 270px;
+    height: 40px;
+  }
+  .resultText {
+    width: 280px;
+    height: 40px;
+  }
+  .outputContainer {
+    width: 280px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .formContainer {
+    width: 450px;
+    height: 350px;
+    margin-top: 100px;
+  }
+  .inputData {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 290px;
+    height: 40px;
+  }
+  .generateButton {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 290px;
+    height: 40px;
+  }
+  .resultText {
+    width: 300px;
+    height: 40px;
+  }
+  .outputContainer {
+    width: 300px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .formContainer {
+    width: 500px;
+    height: 400px;
+    margin-top: 100px;
+  }
+  .inputData {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 310px;
+    height: 40px;
+  }
+  .generateButton {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 310px;
+    height: 40px;
+  }
+  .resultText {
+    width: 320px;
+    height: 40px;
+  }
+  .outputContainer {
+    width: 320px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .formContainer {
+    width: 550px;
+    height: 450px;
+    margin-top: 120px;
+  }
+  .inputData {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 330px;
+    height: 40px;
+  }
+  .generateButton {
+    margin-top: 100px;
+    margin-left: 120px;
+    width: 330px;
+    height: 40px;
+  }
+  .resultText {
+    width: 340px;
+    height: 40px;
+  }
+  .outputContainer {
+    width: 340px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 100px) {
+  .body {
+    background: -webkit-linear-gradient(left, #E0FFFF, #AFEEEE);
+  }
+}
+
+@media (max-width: 200px) {
+  .body {
+    background: -webkit-linear-gradient(left, #E0FFFF, #AFEEEE);
+  }
+}
+
+@media (max-width: 400px) {
+  .body {
+    background: -webkit-linear-gradient(left, #E0FFFF, #AFEEEE);
+  }
+}
+
+@media (max-width: 500px) {
+  .body {
+    background: -webkit-linear-gradient(left, #E0FFFF, #AFEEEE);
+  }
+}
+
+@media (max-width: 600px) {
+  .body {
+    background: -webkit-linear-gradient(left, #E0FFFF, #AFEEEE);
+  }
+}
+
+@media (max-width: 700px) {
+  .body {
+    background: -webkit-linear-gradient(left, #E0FFFF, #AFEEEE);
+  }
+}
+
+@media (max-width: 800px) {
+  .body {
+    background: -webkit-linear-gradient(left, #E0FFFF, #AFEEEE);
+  }
+}
+
