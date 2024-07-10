@@ -39,3 +39,12 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.register('build-and-run') {
+	doFirst {
+		build
+	}
+	doLast {
+		bootRun
+	}
+}
