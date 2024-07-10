@@ -21,6 +21,7 @@ public class DefaultBCryptService implements BCryptService<HashGenerationInputDt
 
         if (dto.getCostFactor() == null) {
             log.warn("Input cost factor is empty, default value is 10 now");
+            throw new BCryptProcessException("Cost Factor in empty");
         }
 
         String bcryptHashString = BCrypt.hashpw(
