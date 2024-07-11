@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  backend:
+    image: hash-generator-backend:latest
+    restart: on-failure
+    container_name: backend
+    ports:
+      - "7777:7777"
+  client:
+    image: hash-generator-client:latest
+    restart: on-failure
+    container_name: client
+    ports:
+      - "3000:3000"
