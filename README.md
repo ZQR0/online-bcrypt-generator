@@ -3,10 +3,14 @@
 
 
 
-## Example of using
+## Example of using (Generate hash and verify)
 ![Logo](https://i.imgur.com/ewTt4Wt.png)
 
 You just need to type your text, choose cost factor (or salt) and click button to generate your hash.
+
+Also, you can verify your hash
+
+![Logo](https://imgur.com/eH9wvQd.png)
 
 
 ## Tech Stack
