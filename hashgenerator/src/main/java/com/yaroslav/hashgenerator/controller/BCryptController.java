@@ -2,7 +2,9 @@ package com.yaroslav.hashgenerator.controller;
 
 import com.yaroslav.hashgenerator.common.exception.BCryptProcessException;
 import com.yaroslav.hashgenerator.dto.HashGenerationInputDto;
-import com.yaroslav.hashgenerator.service.BCryptService;
+import com.yaroslav.hashgenerator.dto.HashVerifierDto;
+import com.yaroslav.hashgenerator.service.BCryptGenerationService;
+import com.yaroslav.hashgenerator.service.BCryptVerifierService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,31 +18,52 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class BCryptController {
 
-    private final BCryptService<HashGenerationInputDto> bCryptService;
+    private final BCryptGenerationService bCryptGenerationService;
+    private final BCryptVerifierService bCryptVerifierService;
 
 
     @PostMapping(path = "get-hash")
     public ResponseEntity<?> generateHashEndpoint(@RequestBody HashGenerationInputDto dto) {
-        Map<String, String> likeJsonMap = new HashMap<>();
+        Map<String, String> resultMap = new HashMap<>();
         try {
-            String hash = this.bCryptService.generateHash(dto);
-            likeJsonMap.put("hash", hash);
+            String hash = this.bCryptGenerationService.generateHash(dto);
+            resultMap.put("hash", hash);
+            resultMap.put("error", "");
             return new ResponseEntity<>(
-                    likeJsonMap,
+                    resultMap,
                     HttpStatus.OK
             );
         } catch (BCryptProcessException exception) {
-            likeJsonMap.put("message", exception.getMessage());
+            resultMap.put("hash", "");
+            resultMap.put("error", exception.getMessage());
             return new ResponseEntity<>(
-                    likeJsonMap,
+                    resultMap,
                     HttpStatus.BAD_REQUEST
             );
         }
     }
 
-    @GetMapping(path = "get-debug")
-    public String getDebug() {
-        return "debug";
+
+    @PostMapping(path = "verify-hash")
+    public ResponseEntity<?> verifyHashEndpoint(@RequestBody HashVerifierDto dto) {
+        Map<String, String> resultMap = new HashMap<>();
+        try {
+            String message = this.bCryptVerifierService.verifyBCryptHash(dto);
+            resultMap.put("result", message);
+            resultMap.put("error", "");
+            return new ResponseEntity<>(
+                    resultMap,
+                    HttpStatus.OK
+            );
+        } catch (BCryptProcessException exception) {
+            resultMap.put("result", "");
+            resultMap.put("error", exception.getMessage());
+            return new ResponseEntity<>(
+                    resultMap,
+                    HttpStatus.OK
+            );
+        }
+
     }
 
 }

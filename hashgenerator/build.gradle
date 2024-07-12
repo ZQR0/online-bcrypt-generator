@@ -34,6 +34,10 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// https://mvnrepository.com/artifact/at.favre.lib/bcrypt
+	implementation group: 'at.favre.lib', name: 'bcrypt', version: '0.10.2'
+
 }
 
 tasks.named('test') {
